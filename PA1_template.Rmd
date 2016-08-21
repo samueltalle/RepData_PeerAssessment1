@@ -1,9 +1,11 @@
 ---
-title: "Reproducible Research: Peer Assessment 1"
-output: 
-  html_document:
-    keep_md: true
+title: "Assignment2-Reproducible Research"
+author: Samuel Talle
+date: August 22, 2016
+output: md_document
+
 ---
+
 
 ```{r, echo=TRUE}
 #load library
