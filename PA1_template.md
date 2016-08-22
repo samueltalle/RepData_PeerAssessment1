@@ -25,7 +25,7 @@
     TotalStepsEachDay$totalsteps<-as.numeric(TotalStepsEachDay$totalsteps) # convert steps to numeric
     hist(TotalStepsEachDay$totalsteps,breaks=10,col = "red")
 
-![](Assignment2_files/figure-markdown_strict/unnamed-chunk-3-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-3-1.png)
 
     #Mean and median number of steps taken each day
     median(TotalStepsEachDay$totalsteps,na.rm = TRUE)
@@ -44,7 +44,7 @@
     avgtimeseries <- ts(AvgStepsEachDay$Avgsteps)
     plot.ts(avgtimeseries)
 
-![](Assignment2_files/figure-markdown_strict/unnamed-chunk-5-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-5-1.png)
 
     #The 5-minute interval that, on average, contains the maximum number of steps
     MaxSteps <-sqldf("SELECT max(steps) FROM MyData")
@@ -64,7 +64,7 @@
     TotalStepsEachDay2$totalsteps<-as.numeric(TotalStepsEachDay2$totalsteps) # convert steps to numeric
     hist(TotalStepsEachDay2$totalsteps,breaks=10,col = "red")
 
-![](Assignment2_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-8-1.png)
 
     #Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
     MyData2$days<-weekdays(as.Date(MyData2$date,'%Y-%m-%d'))
@@ -74,4 +74,4 @@
                               ")
     barplot(AvgStepsWeekdays$avgsteps,names.arg = AvgStepsWeekdays$days)
 
-![](Assignment2_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](PA1_template_files/figure-markdown_strict/unnamed-chunk-9-1.png)
